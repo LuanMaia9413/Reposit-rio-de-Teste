@@ -1,0 +1,10 @@
+name: Testando Meu Primeiro Job
+
+on: [push]
+
+jobs:
+  meu-primeiro-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Passo Unico
+        run: echo "Olá Mundo! O computador virtual do GitHub acabou de ligar e rodar esse comando!"
