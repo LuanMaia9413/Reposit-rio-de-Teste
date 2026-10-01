@@ -1,4 +1,4 @@
-name: Testando Meu Primeiro Job
+name: Meu primeiro pipeline
 
 on: [push]
 
@@ -6,5 +6,14 @@ jobs:
   meu-primeiro-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Passo Unico
-        run: echo "Olá Mundo! O computador virtual do GitHub acabou de ligar e rodar esse comando!"
+      - name: Verificar sistema operacional
+        run: uname -a
+        
+      - name: Verificar java
+        run: java -version
+        
+      - name: Verificar Maven
+        run: mvn -version
+        
+      - name: Mensagem
+        run: echo "Meu primeiro pipeline está funcionando"
